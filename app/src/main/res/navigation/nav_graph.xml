@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.labot2.MovieListFragment"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_movieDetailsFragment2"
+            app:destination="@id/movieDetailsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment2"
+        android:name="com.example.labot2.fragment.MovieDetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="plot"
+            app:argType="string" />
+        <argument
+            android:name="actors"
+            app:argType="string" />
+        <argument
+            android:name="director"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
